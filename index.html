@@ -60,7 +60,7 @@
       padding: 18px 45px;
       border-radius: 10px;
       text-decoration: none;
-      margin: 30px auto;
+      margin: 20px auto 8px;
       box-shadow: 0 5px 15px rgba(40,167,69,0.35);
       transition: all 0.25s;
     }
@@ -68,6 +68,12 @@
       background: #218838;
       transform: translateY(-3px);
       box-shadow: 0 8px 20px rgba(40,167,69,0.45);
+    }
+    .whatsapp-note {
+      font-size: 1rem;
+      color: #555;
+      margin: 0 0 30px 0;
+      line-height: 1.4;
     }
     .benefits {
       background: white;
@@ -196,7 +202,11 @@
 
   <p class="subtext">A proven system already helping thousands break free from financial struggles...<br>now it’s your turn.</p>
 
-  <a href="#register" class="green-btn">Click Here to Join Live Training Now</a>
+  <a href="https://wa.link/ngwmpo" class="green-btn" target="_blank">Click Here to Join Live Training Now</a>
+  <div class="whatsapp-note">
+    After clicking, send this message:<br>
+    <strong>Hello Coach Favour, I am interested in the training, I want to change my situation to be better! My name is [Your Name]</strong>
+  </div>
 
   <div class="benefits">
     <h2>Here’s what you’ll learn during the training...</h2>
@@ -208,7 +218,11 @@
     </ul>
   </div>
 
-  <a href="#register" class="green-btn">Click Here to Join Live Training Now</a>
+  <a href="https://wa.link/ngwmpo" class="green-btn" target="_blank">Click Here to Join Live Training Now</a>
+  <div class="whatsapp-note">
+    After clicking, send this message:<br>
+    <strong>Hello Coach Favour, I am interested in the training, I want to change my situation to be better! My name is [Your Name]</strong>
+  </div>
 
   <div class="warning-box">
     <h3>PLEASE NOTE: This Is NOT for everyone</h3>
@@ -223,7 +237,11 @@
     This Live Training Is For Action Takers – Those Who’re Ready To Change Their Financial Future
   </div>
 
-  <a href="#register" class="green-btn">Click Here to Join Live Training Now</a>
+  <a href="https://wa.link/ngwmpo" class="green-btn" target="_blank">Click Here to Join Live Training Now</a>
+  <div class="whatsapp-note">
+    After clicking, send this message:<br>
+    <strong>Hello Coach Favour, I am interested in the training, I want to change my situation to be better! My name is [Your Name]</strong>
+  </div>
 
   <div class="timer">
     <div class="live-date" id="liveDate"></div>
@@ -238,25 +256,18 @@
 </footer>
 
 <script>
-  // =============================================
-  // 1. Show today's real date (dynamic)
-  // =============================================
+  // Live date (today's date + fixed 7:30 AM time)
   const liveDateEl = document.getElementById("liveDate");
   const today = new Date();
-
   const daysOfWeek = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
   const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
-
   const dayName = daysOfWeek[today.getDay()];
   const monthName = months[today.getMonth()];
   const dayNum = today.getDate();
   const year = today.getFullYear();
+  liveDateEl.textContent = `${dayName}, ${monthName} ${dayNum}, ${year}, 00:00 AM`;
 
-  liveDateEl.textContent = `${dayName}, ${monthName} ${dayNum}, ${year}, 7:30 AM`;
-
-  // =============================================
-  // 2. 30-minute countdown (resets every page load)
-  // =============================================
+  // 30-minute countdown (resets on page load)
   let seconds = 30 * 60;
   const timerEl = document.querySelector('.flip-timer');
 
